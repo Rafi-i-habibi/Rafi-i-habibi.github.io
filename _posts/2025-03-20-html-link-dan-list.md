@@ -47,7 +47,6 @@ Materi dasar tentang penggunaan link dan list dalam HTML.
 | Unordered List | `<ul>` | Daftar tak berurutan (dengan bullet) |
 | Description List | `<dl>` | Daftar definisi/keterangan |
 
----
 
 ### ✅ Contoh Ordered List
 
@@ -88,7 +87,7 @@ Materi dasar tentang penggunaan link dan list dalam HTML.
 - Gunakan list untuk menyusun menu navigasi.
 - Nesting list di dalam list untuk membuat submenu atau daftar berjenjang.
 
----
+
 
 ## ✅ Kesimpulan
 
