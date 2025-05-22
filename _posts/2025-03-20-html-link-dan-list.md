@@ -81,8 +81,6 @@ Materi dasar tentang penggunaan link dan list dalam HTML.
 </dl>
 
 
----
-
 ## 🎯 Tips Penggunaan Link & List
 
 - Gunakan `target="_blank"` untuk membuka link di tab baru.
