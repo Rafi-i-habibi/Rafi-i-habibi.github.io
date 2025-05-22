@@ -1,4 +1,139 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-05-22T14:24:02+07:00</updated><id>http://localhost:4000/feed.xml</id><entry><title type="html">HTML: Link dan List</title><link href="http://localhost:4000/2025/03/20/html-link-dan-list.html" rel="alternate" type="text/html" title="HTML: Link dan List" /><published>2025-03-20T00:00:00+07:00</published><updated>2025-03-20T00:00:00+07:00</updated><id>http://localhost:4000/2025/03/20/html-link-dan-list</id><content type="html" xml:base="http://localhost:4000/2025/03/20/html-link-dan-list.html"><![CDATA[<p>Materi tentang link dan lists pada HTML</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-05-22T14:36:57+07:00</updated><id>http://localhost:4000/feed.xml</id><entry><title type="html">Belajar Config Yml</title><link href="http://localhost:4000/2025/04/24/Config-Yml.html" rel="alternate" type="text/html" title="Belajar Config Yml" /><published>2025-04-24T00:00:00+07:00</published><updated>2025-04-24T00:00:00+07:00</updated><id>http://localhost:4000/2025/04/24/Config-Yml</id><content type="html" xml:base="http://localhost:4000/2025/04/24/Config-Yml.html"><![CDATA[<h2 id="materi-mengenai-konfigurasi-file-yml">Materi mengenai konfigurasi file <code class="language-plaintext highlighter-rouge">.yml</code></h2>
+
+<h1 id="-panduan-konfigurasi-file-yml">📘 Panduan Konfigurasi File <code class="language-plaintext highlighter-rouge">.yml</code></h1>
+
+<h2 id="apa-itu-file-yaml">Apa itu File YAML?</h2>
+
+<p>YAML (YAML Ain’t Markup Language) adalah format serialisasi data yang mudah dibaca manusia, sering digunakan untuk file konfigurasi.</p>
+
+<hr />
+
+<h2 id="-struktur-dasar-yaml">🧱 Struktur Dasar YAML</h2>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">key</span><span class="pi">:</span> <span class="s">value</span>
+</code></pre></div></div>
+
+<ul>
+  <li><strong>Key</strong> = nama properti/parameter</li>
+  <li><strong>Value</strong> = nilai dari properti tersebut</li>
+  <li>Menggunakan <strong>indentasi</strong> (spasi, bukan tab) untuk menandai level hierarki</li>
+</ul>
+
+<p>Contoh:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">server</span><span class="pi">:</span>
+  <span class="na">port</span><span class="pi">:</span> <span class="m">8080</span>
+  <span class="na">host</span><span class="pi">:</span> <span class="s">localhost</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="-contoh-struktur-konfigurasi-aplikasi">📁 Contoh Struktur Konfigurasi Aplikasi</h2>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">app</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">MyApp</span>
+  <span class="na">version</span><span class="pi">:</span> <span class="s">1.0.0</span>
+
+<span class="na">server</span><span class="pi">:</span>
+  <span class="na">port</span><span class="pi">:</span> <span class="m">3000</span>
+  <span class="na">host</span><span class="pi">:</span> <span class="s">127.0.0.1</span>
+
+<span class="na">database</span><span class="pi">:</span>
+  <span class="na">type</span><span class="pi">:</span> <span class="s">mysql</span>
+  <span class="na">host</span><span class="pi">:</span> <span class="s">localhost</span>
+  <span class="na">port</span><span class="pi">:</span> <span class="m">3306</span>
+  <span class="na">username</span><span class="pi">:</span> <span class="s">root</span>
+  <span class="na">password</span><span class="pi">:</span> <span class="s">secret</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="-list--array-dalam-yaml">🔁 List / Array dalam YAML</h2>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">fruits</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">apple</span>
+  <span class="pi">-</span> <span class="s">banana</span>
+  <span class="pi">-</span> <span class="s">orange</span>
+</code></pre></div></div>
+
+<p>Bisa juga dalam bentuk inline:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">fruits</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">apple</span><span class="pi">,</span> <span class="nv">banana</span><span class="pi">,</span> <span class="nv">orange</span><span class="pi">]</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="-nested-struktur--hierarki">🔗 Nested Struktur / Hierarki</h2>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">user</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">John Doe</span>
+  <span class="na">contact</span><span class="pi">:</span>
+    <span class="na">email</span><span class="pi">:</span> <span class="s">john@example.com</span>
+    <span class="na">phone</span><span class="pi">:</span> <span class="s2">"</span><span class="s">123-456-7890"</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="-boolean-null-dan-number">✅ Boolean, Null, dan Number</h2>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">isActive</span><span class="pi">:</span> <span class="kc">true</span>
+<span class="na">isVerified</span><span class="pi">:</span> <span class="kc">false</span>
+<span class="na">points</span><span class="pi">:</span> <span class="m">150</span>
+<span class="na">data</span><span class="pi">:</span> <span class="kc">null</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="-tips-penting">📌 Tips Penting</h2>
+
+<ul>
+  <li>Gunakan <strong>2 spasi</strong> untuk indentasi, <strong>bukan tab</strong></li>
+  <li>File biasanya berekstensi <code class="language-plaintext highlighter-rouge">.yml</code> atau <code class="language-plaintext highlighter-rouge">.yaml</code></li>
+  <li>Jangan gunakan tanda kutip kecuali diperlukan</li>
+  <li>Format ini sangat sensitif terhadap spasi!</li>
+</ul>
+
+<hr />
+
+<h2 id="️-penggunaan-yaml-dalam-berbagai-tools">🛠️ Penggunaan YAML dalam Berbagai Tools</h2>
+
+<h3 id="1-github-actions-githubworkflowsciyml">1. GitHub Actions (<code class="language-plaintext highlighter-rouge">.github/workflows/ci.yml</code>)</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">name</span><span class="pi">:</span> <span class="s">CI</span>
+
+<span class="na">on</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">push</span><span class="pi">]</span>
+
+<span class="na">jobs</span><span class="pi">:</span>
+  <span class="na">build</span><span class="pi">:</span>
+    <span class="na">runs-on</span><span class="pi">:</span> <span class="s">ubuntu-latest</span>
+    <span class="na">steps</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/checkout@v2</span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Install Dependencies</span>
+        <span class="na">run</span><span class="pi">:</span> <span class="s">npm install</span>
+</code></pre></div></div>
+
+<h3 id="2-docker-compose-docker-composeyml">2. Docker Compose (<code class="language-plaintext highlighter-rouge">docker-compose.yml</code>)</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">version</span><span class="pi">:</span> <span class="s1">'</span><span class="s">3'</span>
+<span class="na">services</span><span class="pi">:</span>
+  <span class="na">web</span><span class="pi">:</span>
+    <span class="na">image</span><span class="pi">:</span> <span class="s">nginx</span>
+    <span class="na">ports</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">80:80"</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="-referensi">📚 Referensi</h2>
+
+<ul>
+  <li><a href="https://yaml.org/spec/">YAML Official Spec</a></li>
+  <li><a href="https://learnxinyminutes.com/docs/yaml/">Learn YAML in Y Minutes</a></li>
+</ul>
+
+<hr />
+
+<p>Jika kamu ingin materi ini dikembangkan ke dalam format presentasi atau ditambahkan studi kasus spesifik (misalnya Spring Boot, Ansible, dsb), beri tahu saja!</p>]]></content><author><name></name></author><summary type="html"><![CDATA[Materi mengenai konfigurasi file .yml]]></summary></entry><entry><title type="html">HTML: Link dan List</title><link href="http://localhost:4000/2025/03/20/html-link-dan-list.html" rel="alternate" type="text/html" title="HTML: Link dan List" /><published>2025-03-20T00:00:00+07:00</published><updated>2025-03-20T00:00:00+07:00</updated><id>http://localhost:4000/2025/03/20/html-link-dan-list</id><content type="html" xml:base="http://localhost:4000/2025/03/20/html-link-dan-list.html"><![CDATA[<p>Materi tentang link dan lists pada HTML</p>
 
 <p>Materi dasar tentang penggunaan link dan list dalam HTML.</p>
 
@@ -414,4 +549,4 @@
 
 <blockquote>
   <p>💡 Mulailah dari Markdown, lalu perdalam HTML untuk kontrol yang lebih menyeluruh! 🚀</p>
-</blockquote>]]></content><author><name></name></author><summary type="html"><![CDATA[Materi tentang Markdown dan HTML]]></summary></entry><entry><title type="html">Installasi Ruby Dan Jekyll</title><link href="http://localhost:4000/2025/02/20/installasi-ruby-dan-jekyll.html" rel="alternate" type="text/html" title="Installasi Ruby Dan Jekyll" /><published>2025-02-20T00:00:00+07:00</published><updated>2025-02-20T00:00:00+07:00</updated><id>http://localhost:4000/2025/02/20/installasi-ruby-dan-jekyll</id><content type="html" xml:base="http://localhost:4000/2025/02/20/installasi-ruby-dan-jekyll.html"><![CDATA[]]></content><author><name></name></author><summary type="html"><![CDATA[]]></summary></entry></feed>
+</blockquote>]]></content><author><name></name></author><summary type="html"><![CDATA[Materi tentang Markdown dan HTML]]></summary></entry><entry><title type="html">Belajar Markdown &amp;amp; HTML</title><link href="http://localhost:4000/2025/03/06/Plugins.html" rel="alternate" type="text/html" title="Belajar Markdown &amp;amp; HTML" /><published>2025-03-06T00:00:00+07:00</published><updated>2025-03-06T00:00:00+07:00</updated><id>http://localhost:4000/2025/03/06/Plugins</id><content type="html" xml:base="http://localhost:4000/2025/03/06/Plugins.html"><![CDATA[]]></content><author><name></name></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Installasi Ruby Dan Jekyll</title><link href="http://localhost:4000/2025/02/20/installasi-ruby-dan-jekyll.html" rel="alternate" type="text/html" title="Installasi Ruby Dan Jekyll" /><published>2025-02-20T00:00:00+07:00</published><updated>2025-02-20T00:00:00+07:00</updated><id>http://localhost:4000/2025/02/20/installasi-ruby-dan-jekyll</id><content type="html" xml:base="http://localhost:4000/2025/02/20/installasi-ruby-dan-jekyll.html"><![CDATA[]]></content><author><name></name></author><summary type="html"><![CDATA[]]></summary></entry></feed>
