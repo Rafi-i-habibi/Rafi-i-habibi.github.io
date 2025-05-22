@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Mengenal dan Menggunakan Plugins di jekyll</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+  </head>
+  <body>
+    
+    <nav class="navbar">
+    <div class="nav-container">
+  
+      <div class="logo">Workshop Web Dasar</div>
+      <div class="nav-links">
+        
+          <a href="/" >
+            Home
+          </a>
+        
+          <a href="/friends.html" >
+            Friends
+          </a>
+        
+          <a href="/blog.html" >
+            Blog
+          </a>
+        
+      </div>
+    </div>
+  </nav> <h1>Belajar Mengenal dan Menggunakan Plugins di jekyll</h1>
+<p>24 Apr 2025 </p>
+
+<main class="blog-container">
+    <p>Berikut adalah materi pembelajaran <strong>“Mengenal dan Menggunakan Plugins di Jekyll”</strong> dalam format Markdown, cocok untuk dokumentasi atau bahan belajar.</p>
+
+<hr />
+
+<h1 id="-mengenal-dan-menggunakan-plugins-di-jekyll">🔌 Mengenal dan Menggunakan Plugins di Jekyll</h1>
+
+<h2 id="-apa-itu-plugin-di-jekyll">📘 Apa itu Plugin di Jekyll?</h2>
+
+<p>Plugin di Jekyll adalah <strong>ekstensi</strong> yang memungkinkan kita untuk menambahkan <strong>fitur tambahan</strong> di luar kemampuan dasar Jekyll. Plugin dapat digunakan untuk:</p>
+
+<ul>
+  <li>Membuat tag atau filter kustom</li>
+  <li>Menambahkan generator halaman otomatis</li>
+  <li>Mengubah proses build</li>
+  <li>Menyisipkan data dinamis</li>
+</ul>
+
+<hr />
+
+<h2 id="️-mengaktifkan-plugin-di-jekyll">⚙️ Mengaktifkan Plugin di Jekyll</h2>
+
+<h3 id="1-tambahkan-plugin-ke-dalam-file-_configyml">1. Tambahkan plugin ke dalam file <code class="language-plaintext highlighter-rouge">_config.yml</code>:</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">plugins</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">jekyll-seo-tag</span>
+  <span class="pi">-</span> <span class="s">jekyll-sitemap</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>⚠️ Gunakan <code class="language-plaintext highlighter-rouge">plugins:</code> (bukan <code class="language-plaintext highlighter-rouge">gems:</code>) untuk Jekyll versi 3.5 ke atas.</p>
+</blockquote>
+
+<h3 id="2-install-plugin-via-bundler">2. Install plugin via bundler</h3>
+
+<p>Pastikan plugin juga ditambahkan di <code class="language-plaintext highlighter-rouge">Gemfile</code>:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">group</span> <span class="ss">:jekyll_plugins</span> <span class="k">do</span>
+  <span class="n">gem</span> <span class="s2">"jekyll-seo-tag"</span>
+  <span class="n">gem</span> <span class="s2">"jekyll-sitemap"</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>Lalu jalankan:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle <span class="nb">install</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="-contoh-plugin-populer-di-jekyll">🔎 Contoh Plugin Populer di Jekyll</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Plugin</th>
+      <th>Kegunaan</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">jekyll-seo-tag</code></td>
+      <td>Otomatis menambahkan tag SEO</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">jekyll-sitemap</code></td>
+      <td>Membuat file <code class="language-plaintext highlighter-rouge">sitemap.xml</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">jekyll-feed</code></td>
+      <td>Membuat RSS feed untuk blog</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">jekyll-paginate</code></td>
+      <td>Menambahkan fitur pagination</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">jekyll-archives</code></td>
+      <td>Mengatur arsip berdasarkan tag/kategori</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="️-menggunakan-plugin-di-template">🛠️ Menggunakan Plugin di Template</h2>
+
+<p>Contoh penggunaan <code class="language-plaintext highlighter-rouge">jekyll-feed</code> akan otomatis menambahkan <code class="language-plaintext highlighter-rouge">/feed.xml</code>.</p>
+
+<hr />
+
+<h2 id="-membuat-plugin-sendiri">👨‍💻 Membuat Plugin Sendiri</h2>
+
+<h3 id="contoh-plugin-filter-kustom-_pluginsreverse_filterrb">Contoh Plugin Filter Kustom (<code class="language-plaintext highlighter-rouge">_plugins/reverse_filter.rb</code>):</h3>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="nn">Jekyll</span>
+  <span class="k">module</span> <span class="nn">ReverseFilter</span>
+    <span class="k">def</span> <span class="nf">reverse</span><span class="p">(</span><span class="n">input</span><span class="p">)</span>
+      <span class="n">input</span><span class="p">.</span><span class="nf">reverse</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="no">Liquid</span><span class="o">::</span><span class="no">Template</span><span class="p">.</span><span class="nf">register_filter</span><span class="p">(</span><span class="no">Jekyll</span><span class="o">::</span><span class="no">ReverseFilter</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Penggunaan di template:</p>
+
+<div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Hello World
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="-hosting-di-github-pages">📦 Hosting di GitHub Pages</h2>
+
+<blockquote>
+  <p>GitHub Pages <strong>tidak mendukung semua plugin secara langsung</strong>.</p>
+</blockquote>
+
+<p>Untuk menggunakan plugin kustom atau plugin tidak didukung GitHub Pages:</p>
+
+<ul>
+  <li>Gunakan <strong>Jekyll secara lokal</strong></li>
+  <li>Deploy ke GitHub sebagai <strong>static site (hasil build)</strong>, misalnya dengan <strong>GitHub Actions</strong> atau Netlify.</li>
+</ul>
+
+<hr />
+
+<h2 id="-referensi">🔗 Referensi</h2>
+
+<ul>
+  <li><a href="https://jekyllrb.com/docs/plugins/">Dokumentasi Resmi Jekyll Plugins</a></li>
+  <li><a href="https://github.com/jekyll/jekyll-seo-tag">jekyll-seo-tag</a></li>
+  <li><a href="https://github.com/jekyll/jekyll-sitemap">jekyll-sitemap</a></li>
+</ul>
+
+<hr />
+
+<p>Jika kamu ingin, aku juga bisa bantu membuat contoh proyek Jekyll kecil yang menggunakan plugin-plugin tersebut.</p>
+</main> <div class="footer">
+    <p>
+      © 2025, Created <i class="fas fa-heart"></i> by <span>OnlyJack </span>
+      <a
+        href="https://www.instagram.com/zkyy.frezy?igsh=MXB3N21zbm44ZjdwNw=="
+        class="social-icon"
+        ><i class="fab fa-instagram"></i
+      ></a>
+      <a href="https://www.tiktok.com/@c.classsy" class="social-icon"
+        ><i class="fab fa-tiktok"></i
+      ></a>
+      
+      <a href="https://github.com/M-ZakiFahrezi" class="social-icon"
+        ><i class="fab fa-github"></i
+      ></a>
+    </p>
+  </div>
+  </body>
+</html>

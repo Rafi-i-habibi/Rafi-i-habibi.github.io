@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Belajar Mengenal dan Menggunakan Plugins di jekyll"
-date: 2025-04-24
+date: 2025-05-07
 ---
 
 Berikut adalah **materi pembelajaran SCSS dan SASS** dalam format **Markdown**, cocok untuk dokumentasi atau bahan belajar.
