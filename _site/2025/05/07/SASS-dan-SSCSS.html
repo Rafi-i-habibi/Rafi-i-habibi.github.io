@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Menggunakan SASS Dan SCSS di Jekyll</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+
+          <!-- favicon -->
+   <link rel="icon" href="/assets/images/favicon.icn">
+
+          <!-- JavaScript -->
+    <script src="/assets/js/script.js"></script>
+
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Belajar Menggunakan SASS Dan SCSS di Jekyll</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Belajar Menggunakan SASS Dan SCSS di Jekyll" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Berikut adalah materi pembelajaran SCSS dan SASS dalam format Markdown, cocok untuk dokumentasi atau bahan belajar." />
+<meta property="og:description" content="Berikut adalah materi pembelajaran SCSS dan SASS dalam format Markdown, cocok untuk dokumentasi atau bahan belajar." />
+<link rel="canonical" href="http://localhost:4000/2025/05/07/SASS-dan-SSCSS.html" />
+<meta property="og:url" content="http://localhost:4000/2025/05/07/SASS-dan-SSCSS.html" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-05-07T00:00:00+07:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Belajar Menggunakan SASS Dan SCSS di Jekyll" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-05-07T00:00:00+07:00","datePublished":"2025-05-07T00:00:00+07:00","description":"Berikut adalah materi pembelajaran SCSS dan SASS dalam format Markdown, cocok untuk dokumentasi atau bahan belajar.","headline":"Belajar Menggunakan SASS Dan SCSS di Jekyll","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2025/05/07/SASS-dan-SSCSS.html"},"url":"http://localhost:4000/2025/05/07/SASS-dan-SSCSS.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+  <body>
+    <nav class="navbar">
+    <div class="nav-container">
+  
+      <div class="logo">Workshop Web Dasar</div>
+  
+      <div class="nav-links">
+        
+          <a href="/" >
+            Home
+          </a>
+        
+          <a href="/friends.html" >
+            Friends
+          </a>
+        
+          <a href="/blog.html" >
+            Blog
+          </a>
+        
+      </div>
+    </div>
+  </nav>
+    <main class="blog-container">
+  <h1 class="blog-post-title">Belajar Menggunakan SASS Dan SCSS di Jekyll</h1>
+  <p>07 May 2025 </p>
+
+  <p>Berikut adalah <strong>materi pembelajaran SCSS dan SASS</strong> dalam format <strong>Markdown</strong>, cocok untuk dokumentasi atau bahan belajar.</p>
+
+<hr />
+
+<h1 id="-belajar-scss-dan-sass">🎨 Belajar SCSS dan SASS</h1>
+
+<h2 id="-apa-itu-sass--scss">🧾 Apa itu SASS &amp; SCSS?</h2>
+
+<p>SASS (Syntactically Awesome Stylesheets) adalah <strong>preprocessor CSS</strong> yang menambahkan fitur seperti <strong>variabel</strong>, <strong>nesting</strong>, <strong>mixin</strong>, dan lainnya agar penulisan CSS lebih efisien.</p>
+
+<p>SASS memiliki dua sintaks:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sintaks</th>
+      <th>Ekstensi</th>
+      <th>Gaya Penulisan</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>SASS</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">.sass</code></td>
+      <td>Tanpa kurung kurawal <code class="language-plaintext highlighter-rouge">{}</code>, tanpa titik koma <code class="language-plaintext highlighter-rouge">;</code></td>
+    </tr>
+    <tr>
+      <td><strong>SCSS</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">.scss</code></td>
+      <td>Mirip CSS biasa, menggunakan <code class="language-plaintext highlighter-rouge">{}</code> dan <code class="language-plaintext highlighter-rouge">;</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p>💡 SCSS lebih populer karena kompatibel penuh dengan CSS.</p>
+</blockquote>
+
+<hr />
+
+<h2 id="-keunggulan-sassscss">🚀 Keunggulan SASS/SCSS</h2>
+
+<ul>
+  <li>Variabel</li>
+  <li>Nesting (penulisan bertingkat)</li>
+  <li>Mixin (fungsi reusable)</li>
+  <li>Inheritance (<code class="language-plaintext highlighter-rouge">@extend</code>)</li>
+  <li>Modularisasi (<code class="language-plaintext highlighter-rouge">@import</code> / <code class="language-plaintext highlighter-rouge">@use</code>)</li>
+  <li>Fungsi dan operasi</li>
+</ul>
+
+<hr />
+
+<h2 id="-instalasi-sass">🔧 Instalasi SASS</h2>
+
+<h3 id="1-instal-via-npm-nodejs">1. Instal via npm (Node.js)</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm <span class="nb">install</span> <span class="nt">-g</span> sass
+</code></pre></div></div>
+
+<h3 id="2-compile-scss-ke-css">2. Compile SCSS ke CSS</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sass style.scss style.css
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="-fitur-fitur-utama">🧪 Fitur-Fitur Utama</h2>
+
+<h3 id="1--variabel">1. 🎯 Variabel</h3>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$primary-color</span><span class="p">:</span> <span class="mh">#3498db</span><span class="p">;</span>
+<span class="nv">$padding</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
+
+<span class="nc">.button</span> <span class="p">{</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="nv">$primary-color</span><span class="p">;</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="nv">$padding</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="2--nesting-penulisan-bertingkat">2. 📚 Nesting (Penulisan Bertingkat)</h3>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">nav</span> <span class="p">{</span>
+  <span class="nt">ul</span> <span class="p">{</span>
+    <span class="nt">li</span> <span class="p">{</span>
+      <span class="nt">a</span> <span class="p">{</span>
+        <span class="nl">color</span><span class="p">:</span> <span class="n">blue</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="3--mixin">3. 📦 Mixin</h3>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@mixin</span> <span class="nf">flex-center</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="nb">flex</span><span class="p">;</span>
+  <span class="nl">justify-content</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+  <span class="nl">align-items</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.box</span> <span class="p">{</span>
+  <span class="k">@include</span> <span class="nd">flex-center</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="4--extend-inheritance">4. 📜 Extend (Inheritance)</h3>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">%btn-base</span> <span class="p">{</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">10px</span> <span class="m">20px</span><span class="p">;</span>
+  <span class="nl">border-radius</span><span class="p">:</span> <span class="m">5px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.button</span> <span class="p">{</span>
+  <span class="k">@extend</span> <span class="nv">%btn-base</span><span class="p">;</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="n">blue</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="5--import--modularisasi">5. 🧩 Import &amp; Modularisasi</h3>
+
+<h4 id="scss-lama">SCSS Lama:</h4>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@import</span> <span class="s1">'variables'</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s1">'header'</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h4 id="scss-modern-use-dan-forward">SCSS Modern (<code class="language-plaintext highlighter-rouge">@use</code> dan <code class="language-plaintext highlighter-rouge">@forward</code>):</h4>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// _variables.scss</span>
+<span class="nv">$font-stack</span><span class="p">:</span> <span class="n">Helvetica</span><span class="o">,</span> <span class="nb">sans-serif</span><span class="p">;</span>
+<span class="nv">$primary-color</span><span class="p">:</span> <span class="mh">#333</span><span class="p">;</span>
+
+<span class="c1">// style.scss</span>
+<span class="k">@use</span> <span class="s1">'variables'</span><span class="p">;</span>
+
+<span class="nt">body</span> <span class="p">{</span>
+  <span class="nl">font-family</span><span class="p">:</span> <span class="n">variables</span><span class="o">.</span><span class="nv">$font-stack</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="-fungsi--operasi">📐 Fungsi &amp; Operasi</h2>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$base</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
+
+<span class="nc">.box</span> <span class="p">{</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="nv">$base</span> <span class="o">*</span> <span class="m">2</span><span class="p">;</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="nf">percentage</span><span class="p">(</span><span class="m">0</span><span class="mi">.5</span><span class="p">);</span> <span class="c1">// 50%</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="-auto-compile-scss">🔄 Auto-Compile SCSS</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sass <span class="nt">--watch</span> scss:css
+</code></pre></div></div>
+
+<p>Akan memantau folder <code class="language-plaintext highlighter-rouge">scss/</code> dan meng-compile ke <code class="language-plaintext highlighter-rouge">css/</code>.</p>
+
+<hr />
+
+<h2 id="-referensi">📚 Referensi</h2>
+
+<ul>
+  <li><a href="https://sass-lang.com/">SASS Resmi</a></li>
+  <li><a href="https://devhints.io/sass">SCSS Cheat Sheet</a></li>
+  <li><a href="https://sassmeister.com/">Playground Online</a></li>
+</ul>
+
+<hr />
+
+<h2 id="-tips">🧠 Tips</h2>
+
+<ul>
+  <li>Gunakan <strong>SCSS</strong> jika ingin transisi mulus dari CSS</li>
+  <li>Organisasikan file dengan struktur modular (<code class="language-plaintext highlighter-rouge">_variables.scss</code>, <code class="language-plaintext highlighter-rouge">_mixins.scss</code>, dsb)</li>
+  <li>Gunakan tools seperti <strong>Dart Sass</strong>, <strong>Webpack</strong>, atau <strong>Vite</strong> untuk integrasi dengan proyek besar</li>
+</ul>
+
+<hr />
+
+<p>Jika kamu butuh <strong>template struktur SCSS proyek</strong> atau contoh penggunaan dengan <strong>framework</strong> seperti Bootstrap atau Tailwind, saya bisa bantu juga.</p>
+
+</main>
+
+
+  </body>
+</html>
+  
