@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Belajar Mengenal dan Menggunakan Plugins di jekyll"
+title: "Belajar Mengenal SASS dan SCSS"
 date: 2025-05-07
 ---
 
