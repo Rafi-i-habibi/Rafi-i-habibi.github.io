@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video dan Audio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+  </head>
+  <body>
+    
+    <nav class="navbar">
+    <div class="nav-container">
+  
+      <div class="logo">Workshop Web Dasar</div>
+      <div class="nav-links">
+        
+          <a href="/" >
+            Home
+          </a>
+        
+          <a href="/friends.html" >
+            Friends
+          </a>
+        
+          <a href="/blog.html" >
+            Blog
+          </a>
+        
+      </div>
+    </div>
+  </nav> <h1>Video dan Audio</h1>
+<p>18 May 2025 </p>
+
+<main class="blog-container">
+    <h1 id="materi-lengkap-html-audio-dan-video">Materi Lengkap HTML Audio dan Video</h1>
+
+<h2 id="1-pengantar">1. Pengantar</h2>
+
+<p>HTML5 menyediakan tag khusus untuk menampilkan media audio dan video secara langsung di halaman web tanpa plugin tambahan seperti Flash.</p>
+
+<hr />
+
+<h2 id="2-tag-audio">2. Tag <code class="language-plaintext highlighter-rouge">&lt;audio&gt;</code></h2>
+
+<p>Digunakan untuk menyisipkan file audio.</p>
+
+<h3 id="contoh">Contoh:</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;audio</span> <span class="na">controls</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;source</span> <span class="na">src=</span><span class="s">"audio/musik.mp3"</span> <span class="na">type=</span><span class="s">"audio/mpeg"</span><span class="nt">&gt;</span>
+  Browser Anda tidak mendukung tag audio.
+<span class="nt">&lt;/audio&gt;</span>
+</code></pre></div></div>
+
+<h3 id="atribut">Atribut:</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">controls</code>: Menampilkan kontrol pemutar</li>
+  <li><code class="language-plaintext highlighter-rouge">autoplay</code>: Memutar otomatis saat halaman dimuat</li>
+  <li><code class="language-plaintext highlighter-rouge">loop</code>: Memutar ulang secara terus-menerus</li>
+  <li><code class="language-plaintext highlighter-rouge">muted</code>: Memulai dalam keadaan senyap</li>
+  <li><code class="language-plaintext highlighter-rouge">preload</code>: Petunjuk pemuatan (auto, metadata, none)</li>
+</ul>
+
+<h3 id="format-umum">Format Umum:</h3>
+
+<ul>
+  <li>MP3 (<code class="language-plaintext highlighter-rouge">audio/mpeg</code>)</li>
+  <li>OGG (<code class="language-plaintext highlighter-rouge">audio/ogg</code>)</li>
+  <li>WAV (<code class="language-plaintext highlighter-rouge">audio/wav</code>)</li>
+</ul>
+
+<h2 id="3-tag-video">3. Tag <code class="language-plaintext highlighter-rouge">&lt;video&gt;</code></h2>
+
+<p>Digunakan untuk menyisipkan file video.</p>
+
+<h3 id="contoh-1">Contoh:</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;video</span> <span class="na">width=</span><span class="s">"320"</span> <span class="na">height=</span><span class="s">"240"</span> <span class="na">controls</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;source</span> <span class="na">src=</span><span class="s">"video/film.mp4"</span> <span class="na">type=</span><span class="s">"video/mp4"</span><span class="nt">&gt;</span>
+  Browser Anda tidak mendukung tag video.
+<span class="nt">&lt;/video&gt;</span>
+</code></pre></div></div>
+
+<h3 id="atribut-1">Atribut:</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">controls</code>: Menampilkan kontrol</li>
+  <li><code class="language-plaintext highlighter-rouge">autoplay</code>, <code class="language-plaintext highlighter-rouge">loop</code>, <code class="language-plaintext highlighter-rouge">muted</code></li>
+  <li><code class="language-plaintext highlighter-rouge">poster</code>: Gambar awal sebelum video diputar</li>
+  <li><code class="language-plaintext highlighter-rouge">width</code>, <code class="language-plaintext highlighter-rouge">height</code>: Ukuran tampilan video</li>
+</ul>
+
+<h3 id="format-umum-1">Format Umum:</h3>
+
+<ul>
+  <li>MP4 (<code class="language-plaintext highlighter-rouge">video/mp4</code>)</li>
+  <li>WebM (<code class="language-plaintext highlighter-rouge">video/webm</code>)</li>
+  <li>OGV (<code class="language-plaintext highlighter-rouge">video/ogg</code>)</li>
+</ul>
+
+<h2 id="4-multi-format-dan-fallback">4. Multi-Format dan Fallback</h2>
+
+<p>Gunakan beberapa tag <code class="language-plaintext highlighter-rouge">&lt;source&gt;</code> agar mendukung berbagai browser:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;video</span> <span class="na">controls</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;source</span> <span class="na">src=</span><span class="s">"video/video.mp4"</span> <span class="na">type=</span><span class="s">"video/mp4"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;source</span> <span class="na">src=</span><span class="s">"video/video.webm"</span> <span class="na">type=</span><span class="s">"video/webm"</span><span class="nt">&gt;</span>
+  Browser Anda tidak mendukung pemutaran video.
+<span class="nt">&lt;/video&gt;</span>
+</code></pre></div></div>
+
+<h2 id="5-menyematkan-youtube">5. Menyematkan YouTube</h2>
+
+<p>Selain file lokal, video dari YouTube bisa disisipkan:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;iframe</span> <span class="na">width=</span><span class="s">"560"</span> <span class="na">height=</span><span class="s">"315"</span> <span class="na">src=</span><span class="s">"https://www.youtube.com/embed/ID_VIDEO"</span> <span class="na">frameborder=</span><span class="s">"0"</span> <span class="na">allowfullscreen</span><span class="nt">&gt;&lt;/iframe&gt;</span>
+</code></pre></div></div>
+
+<h2 id="6-tips">6. Tips</h2>
+
+<ul>
+  <li>Simpan file di folder <code class="language-plaintext highlighter-rouge">audio/</code> atau <code class="language-plaintext highlighter-rouge">video/</code></li>
+  <li>Kompres ukuran file agar tidak berat saat dimuat</li>
+  <li>Pastikan format didukung oleh semua browser target</li>
+</ul>
+
+<h2 id="7-referensi">7. Referensi</h2>
+
+<ul>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio">MDN Web Docs - Audio</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video">MDN Web Docs - Video</a></li>
+</ul>
+</main> <div class="footer">
+    <p>
+      © 2025, Created <i class="fas fa-heart"></i> by <span>Bon </span>
+      <a
+        href="https://www.instagram.com/zkyy.frezy?igsh=MXB3N21zbm44ZjdwNw=="
+        class="social-icon"
+        ><i class="fab fa-instagram"></i
+      ></a>ch
+      <a href="https://www.tiktok.com/@c.classsy" class="social-icon"
+        ><i class="fab fa-tiktok"></i
+      ></a>
+      
+      <a href="https://github.com/M-ZakiFahrezi" class="social-icon"
+        ><i class="fab fa-github"></i
+      ></a>
+    </p>
+  </div>
+  </body>
+</html>
